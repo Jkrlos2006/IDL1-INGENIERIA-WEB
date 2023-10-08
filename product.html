@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electronicos JJL</title>
+    <!-- LINK DE CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- LINK DE CAJA ICONOS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <!-- cencabezado -->
+    <header>
+        <!-- barra de navegacion -->
+        <div class="nav container">
+            <a href="#" class="logo">ELECTRONICOS JJL</a>
+            <a href="index.html" class="logo">Inicio</a>
+            <a href="product.html" class="logo">Productos</a>
+            <!-- icono de carrito -->
+            <i class='bx bx-cart' id="cart-icon"></i>
+
+            <!-- carro de compras -->
+            <div class="cart">
+                <h2 class="cart-title">Tu Carrito</h2>
+                <!-- contenido -->
+                <div class="cart-content">
+
+
+                </div>
+                <!-- total -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">S/0</div>
+                </div>
+                <!-- boton comprar -->
+                <button type="button" class="btn-buy">Comprar Ahora</button>
+                <!-- cerrar carrito -->
+                <i class='bx bx-x' id="close-cart"></i>
+
+
+            </div>
+        </div>
+    </header>
+
+    <!-- comprar productos-->
+    <section class="shop container">
+        <h2 class="section-title">Comprar Productos</h2>
+
+
+        <!-- contenido -->
+        <div class="shop-content">
+            <!-- caja 1 -->
+            <div class="product-box">
+                <img src="img/xiaomi.webp" alt="" class="product-img">
+                <h2 class="product-title">Televisor Xiaomi</h2>
+                <span class="price">S/ 1399</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <!-- caja 2 -->
+            <div class="product-box">
+                <img src="img/hyundai.webp" alt="" class="product-img">
+                <h2 class="product-title">Televisor Hyundai</h2>
+                <span class="price">S/ 1999</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <!-- caja 3 -->
+            <div class="product-box">
+                <img src="img/philips.webp" alt="" class="product-img">
+                <h2 class="product-title">Televisor Phillips</h2>
+                <span class="price">S/ 1159</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <!-- caja 4 -->
+            <div class="product-box">
+                <img src="img/samsung.webp" alt="" class="product-img">
+                <h2 class="product-title">Televisor Samsung</h2>
+                <span class="price">S/ 1399</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+    <!-- link del script -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

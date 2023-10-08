@@ -1,0 +1,412 @@
+/* Globales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+img {
+
+    width: 100%;
+
+}
+
+body {
+
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+section {
+
+    padding: 4rem 0 3rem;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsla(0, 45%, 15%, 0.1);
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.logo {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+#cart-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price{
+    font-weight: 500;
+}
+
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.cart-remove{
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price{
+    margin-left: 0.5rem;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: var(--main-color);
+    color:var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background: var(--text-color);
+}
+
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.shop{
+    margin-top: 5rem;
+
+}
+
+/* contenido de la seccion compras */
+
+.shop-content{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 5rem;
+}
+
+.product-box{
+position:relative;
+}
+
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}   
+
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    font-weight: 500;
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.add-cart:hover {
+background: hsl(249,32%,17%);
+}
+
+@media (max-width:1080px){
+    .nav {
+        padding: 15px;
+    }
+section{
+    padding: 3rem 0 2rem;
+}
+
+.container{
+
+margin: 0 auto;
+width: 90%;
+
+}
+
+.shop {
+    margin-top: 2rem !important;
+}
+}
+
+@media (max-width:400px){
+    .nav {
+        padding: 11px;
+    }
+.logo{
+    font-size: 1rem;
+}
+
+.cart {
+    width: 320px;
+}
+
+}
+
+@media (max-width:360px){
+    .shop {
+        margin-top: 1rem !important;}
+
+    .cart{
+        width: 280px;
+    }
+
+    }
+
+    /* Estilos generales */
+body {
+    background-color: #fff; /* Fondo blanco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color:white; /* Fondo del encabezado */
+    color: black; /* Texto en el encabezado */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Enlaces de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Sección de productos destacados */
+.destacados {
+    padding: 20px;
+}
+
+.producto {
+    background-color: #fff; /* Fondo de los productos */
+    border: 1px solid #ddd; /* Borde de los productos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de los productos */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.producto-img {
+    max-width: 80%;
+    height: auto;
+    align-content: center;
+    
+    
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.producto p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #ff4500; /* Color del precio */
+}
+
+/* Sección de contacto */
+.contacto {
+    background-color: #fff; /* Fondo de la sección de contacto */
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contacto label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contacto button {
+    background-color: #ff4500; /* Color del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+    background-color: #e53935; /* Color del botón al pasar el mouse */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333; /* Fondo del pie de página */
+    color: #fff; /* Texto en el pie de página */
+    text-align: center;
+    padding: 10px;
+}
